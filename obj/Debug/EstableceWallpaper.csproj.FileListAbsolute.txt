@@ -1,0 +1,7 @@
+C:\Trabajo\C#\EstablecerWallpaper\bin\Debug\EstableceWallpaper.exe.config
+C:\Trabajo\C#\EstablecerWallpaper\bin\Debug\EstableceWallpaper.exe
+C:\Trabajo\C#\EstablecerWallpaper\bin\Debug\EstableceWallpaper.pdb
+C:\Trabajo\C#\EstablecerWallpaper\obj\Debug\EstableceWallpaper.csproj.AssemblyReference.cache
+C:\Trabajo\C#\EstablecerWallpaper\obj\Debug\EstableceWallpaper.csproj.CoreCompileInputs.cache
+C:\Trabajo\C#\EstablecerWallpaper\obj\Debug\EstableceWallpaper.exe
+C:\Trabajo\C#\EstablecerWallpaper\obj\Debug\EstableceWallpaper.pdb

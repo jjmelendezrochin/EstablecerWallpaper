@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.IO;
+using System.Windows.Forms;
 
 namespace EstableceWallpaper
 {
@@ -26,6 +27,14 @@ namespace EstableceWallpaper
                 //Establece las rutas
                 string sDir = @"D:\My Drive";
                 string path = null;
+                string rutalocal = null;
+
+
+                InputLanguage myDefaultLanguage = InputLanguage.DefaultInputLanguage;
+                InputLanguage myCurrentLanguage = InputLanguage.CurrentInputLanguage;
+
+                string sDef = myDefaultLanguage.Culture.EnglishName;
+                string sLen= myCurrentLanguage.Culture.EnglishName;
 
                 if (Directory.Exists(sDir))
                 {
@@ -40,10 +49,21 @@ namespace EstableceWallpaper
                 StreamReader sr = new StreamReader(path);
                 //Read the first line of text
                 imagePath = sr.ReadLine();
-               
+
                 //close the file
                 sr.Close();
 
+                // Verifica si existe la ruta
+                if (!File.Exists(imagePath))
+                {
+                    imagePath = imagePath.Replace(@"\My Drive\", @"\Mi unidad\");
+                    if (!File.Exists(imagePath))
+                    {
+                        imagePath = imagePath.Replace(@"\Mi unidad\", @"\My Drive\");
+                    }
+                }
+
+                
                 // Set wallpaper
                 SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, imagePath, SPIF_UPDATEINFILE | SPIF_SENDCHANGE);
 
